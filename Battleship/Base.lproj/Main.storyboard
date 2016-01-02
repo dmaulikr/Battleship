@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hUE-fS-4UE">
+                                <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Y6h-Lc-dH8"/>
+                                </constraints>
+                                <collectionViewLayout key="collectionViewLayout" id="3hK-lm-48Z" customClass="KRLCollectionViewGridLayout"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="TEX-vh-pNG">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="c89-fQ-Tj9"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="CAL-Zz-ao1"/>
+                                </connections>
+                            </collectionView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Ria-qa-Hh4">
+                                <rect key="frame" x="300" y="0.0" width="300" height="600"/>
+                                <collectionViewLayout key="collectionViewLayout" id="Sfm-4u-rb6" customClass="KRLCollectionViewGridLayout"/>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ofO-mE-Su3">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3am-9C-Vdj"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="MXH-cW-7Oj"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hUE-fS-4UE" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5TF-MG-BGM"/>
+                            <constraint firstItem="hUE-fS-4UE" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="Bp0-Qh-KOO"/>
+                            <constraint firstItem="hUE-fS-4UE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Nad-Gg-Jgw"/>
+                            <constraint firstAttribute="trailing" secondItem="Ria-qa-Hh4" secondAttribute="trailing" id="Zaj-9b-9YS"/>
+                            <constraint firstItem="Ria-qa-Hh4" firstAttribute="top" secondItem="hUE-fS-4UE" secondAttribute="top" id="fAk-Qc-lFH"/>
+                            <constraint firstItem="Ria-qa-Hh4" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="nGU-m6-OiE"/>
+                            <constraint firstItem="Ria-qa-Hh4" firstAttribute="width" secondItem="hUE-fS-4UE" secondAttribute="width" id="yvS-7D-fpt"/>
+                            <constraint firstItem="Ria-qa-Hh4" firstAttribute="leading" secondItem="hUE-fS-4UE" secondAttribute="trailing" id="zQP-g8-mfG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="opponentGridView" destination="Ria-qa-Hh4" id="paH-Eh-oNi"/>
+                        <outlet property="playerGridView" destination="hUE-fS-4UE" id="8bH-hG-mzs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="305" y="429"/>
+        </scene>
+    </scenes>
+</document>

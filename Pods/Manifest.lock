@@ -1,0 +1,13 @@
+PODS:
+  - JFMinimalNotifications (0.0.5)
+  - KRLCollectionViewGridLayout (0.4.1)
+
+DEPENDENCIES:
+  - JFMinimalNotifications
+  - KRLCollectionViewGridLayout
+
+SPEC CHECKSUMS:
+  JFMinimalNotifications: c0d1eba2b826c1599416880dd48059c9153a6d9a
+  KRLCollectionViewGridLayout: 6363dc7e3d91cf1f97e19ed20846764566659596
+
+COCOAPODS: 0.39.0
