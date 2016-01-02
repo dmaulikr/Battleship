@@ -76,16 +76,10 @@
     [self.passToNextPlayerView addGestureRecognizer:tapGesture];
     [self.view addSubview:self.passToNextPlayerView];
     
-    /**
-     * Create the notification
-     */
     self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess
                                                                       title:@"BOOM!"
                                                                    subTitle:@"You sunk a ship"
                                                                     dismissalDelay:1.0];
-    /**
-     * Add the notification to a view
-     */
     [self.view addSubview:self.minimalNotification];
 }
 
@@ -296,7 +290,17 @@
                 
                 // WON
                 if (self.opponentShipDictionary.count == 0) {
-                    [self setupGame];
+                    UIAlertController *alert =  [[UIAlertController alertControllerWithTitle:@"Great job." message:[NSString stringWithFormat:@"Congrats %@! You won!", !self.isFirstPlayersTurn ? @"Player 1" : @"Player 2"] preferredStyle:UIAlertControllerStyleAlert] init];
+                    
+                    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Reset" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                       [self setupGame];
+                       [alert dismissViewControllerAnimated:YES completion:nil];
+                    }];
+                    
+                    [alert addAction:action];
+                    
+                    [self presentViewController:alert animated:YES completion:nil];
+                    
                     return;
                 }
             }
