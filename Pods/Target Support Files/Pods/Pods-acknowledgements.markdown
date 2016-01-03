@@ -1,6 +1,10 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## Firebase
+
+https://www.firebase.com/terms/terms-of-service.html
+
 ## JFMinimalNotifications
 
 Copyright (c) 2012 Jeremy Fox (jeremyfox.me). All rights reserved.

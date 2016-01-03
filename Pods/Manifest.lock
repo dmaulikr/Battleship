@@ -1,12 +1,15 @@
 PODS:
+  - Firebase (2.5.0)
   - JFMinimalNotifications (0.0.5)
   - KRLCollectionViewGridLayout (0.4.1)
 
 DEPENDENCIES:
+  - Firebase
   - JFMinimalNotifications
   - KRLCollectionViewGridLayout
 
 SPEC CHECKSUMS:
+  Firebase: 744617c0733b45198f9486ebd5cac64ec2d10d79
   JFMinimalNotifications: c0d1eba2b826c1599416880dd48059c9153a6d9a
   KRLCollectionViewGridLayout: 6363dc7e3d91cf1f97e19ed20846764566659596
 

@@ -7,84 +7,131 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		12A1E3F019165E2410FF2E90EBDB3CD2 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
-		1C7E1912AC7D8181837E8F9D9AE9ED42 /* JFMinimalNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 02871FB7A0F44E89084D5AD6C3B16707 /* JFMinimalNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2A43C8B98729A4449BD0DCD2A7429466 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093D627869B650AB8D6411D2DE6B7A /* Foundation.framework */; };
-		36C07801336F360C93BA2E5D60B94D51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093D627869B650AB8D6411D2DE6B7A /* Foundation.framework */; };
-		387E70731A0037B9F8E3731A95F79ABF /* UIView+Round.m in Sources */ = {isa = PBXBuildFile; fileRef = AD257A0A70C7E661F002ED1067A8177F /* UIView+Round.m */; };
-		4BFD9C05A6CB7A8E239177928EC55274 /* UIColor+JFMinimalNotificationColors.m in Sources */ = {isa = PBXBuildFile; fileRef = A4FFE63D8BE842A01D3CBF476E14286F /* UIColor+JFMinimalNotificationColors.m */; };
-		50F5C84EC1E30DD31F941DDDCE1730E7 /* NSInvocation+Constructors.h in Headers */ = {isa = PBXBuildFile; fileRef = 8568EB3990EDE4D2EAA3E8A99AD47687 /* NSInvocation+Constructors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		66F122F23C7537C65CBC670D7B2F1D78 /* KRLCollectionViewGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = FC3983E8D5F2B20BF3874EF76F827124 /* KRLCollectionViewGridLayout.m */; };
-		76AABC878B1C932566924BBE28B7F800 /* KRLCollectionViewGridLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B6E2B122C8D91E63B2276F4DC378AB8C /* KRLCollectionViewGridLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		92D23D8C8D1F4219213497DE92FED770 /* UIColor+JFMinimalNotificationColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 49BB97262F3197DBB930078CFB159299 /* UIColor+JFMinimalNotificationColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		94648BFC13A47994DE2CD41C8DE7EB1C /* JFMinimalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 47B3BEDAB3FCC1F68FD05DB2E6F7EF36 /* JFMinimalNotification.m */; };
-		9BEE41C7EA66644752DFBC43BD28205D /* JFMinimalNotifications-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694C91FDC0B7E4869C97B5CC36056BE /* JFMinimalNotifications-dummy.m */; };
-		AC79B204F800EAC241C599A9AF76E7DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E093D627869B650AB8D6411D2DE6B7A /* Foundation.framework */; };
-		B54F2B51BDAC71C16689BF9146E9FEEA /* JFMinimalNotificationArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9049A97B4310A658478C26D7819EE609 /* JFMinimalNotificationArt.m */; };
-		CAFDD197DE530068EB91A783FC1F9023 /* KRLCollectionViewGridLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 193748FEF724EB65F735F097CFF28BE2 /* KRLCollectionViewGridLayout-dummy.m */; };
-		CC8E46CD514ACD86DDFFF02ED1789A3E /* JFMinimalNotificationArt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9EAB34F52E1F882A330EEAB9A6564FB4 /* JFMinimalNotificationArt.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EEE2B768180112A777548950CD0BE902 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1264325C4220C1BDC3C73E5D496129FD /* CoreGraphics.framework */; };
-		F63A4BEA92E9EB7FDDDBB4B80460A5D9 /* UIView+Round.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD0375A3815158E607ED74EFFDC3728 /* UIView+Round.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FBBC7D3B1CAED14BCEA140A684FFE09C /* NSInvocation+Constructors.m in Sources */ = {isa = PBXBuildFile; fileRef = BB6B77C4DE707D473051F4A0317A60D4 /* NSInvocation+Constructors.m */; };
+		075979D6A80AA907E8C15434C532C221 /* FAuthData.h in Headers */ = {isa = PBXBuildFile; fileRef = B4CD906B24C1024703BACBC39857D203 /* FAuthData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C7E1912AC7D8181837E8F9D9AE9ED42 /* JFMinimalNotification.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AAB27CE46795D32E4D4FE8B041520EE /* JFMinimalNotification.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		36C07801336F360C93BA2E5D60B94D51 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF59AEA1DA4100F9E2C879C2C9A69C11 /* Foundation.framework */; };
+		387E70731A0037B9F8E3731A95F79ABF /* UIView+Round.m in Sources */ = {isa = PBXBuildFile; fileRef = 2677AB64D2762E495F220B79AD89869B /* UIView+Round.m */; };
+		3D9C6D8D9075C09C12E53E0D5B06F15E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1E9F0E5C4A6D04C28FD16DA1CBE8A496 /* CFNetwork.framework */; };
+		3FD61871A384128BD423ECB516B54AC8 /* FEventType.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A1C56F0B1D4E42D8654BBE063DF4DA0 /* FEventType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4BFD9C05A6CB7A8E239177928EC55274 /* UIColor+JFMinimalNotificationColors.m in Sources */ = {isa = PBXBuildFile; fileRef = EB677168638A8D988502DF8BF0417D21 /* UIColor+JFMinimalNotificationColors.m */; };
+		50F5C84EC1E30DD31F941DDDCE1730E7 /* NSInvocation+Constructors.h in Headers */ = {isa = PBXBuildFile; fileRef = C53473E4303D4E9A5DC7B996EB158B8F /* NSInvocation+Constructors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66F122F23C7537C65CBC670D7B2F1D78 /* KRLCollectionViewGridLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = C4006F14EA2D5171BA82B7385721E858 /* KRLCollectionViewGridLayout.m */; };
+		6A1B1829F5A55FB2979D58FB8F957AD7 /* FirebaseApp.h in Headers */ = {isa = PBXBuildFile; fileRef = FF7B0DB7FF6DC121615E92B6920DE291 /* FirebaseApp.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6EE911B933800447253BC3935A13E65E /* FDataSnapshot.h in Headers */ = {isa = PBXBuildFile; fileRef = 20C52D52CFE5BF01AF64E4AC32192BD9 /* FDataSnapshot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		71DF67850774658371D1DFD4DF5186E7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1AC7138C84EBF62F01FF4680A524780 /* Security.framework */; };
+		76AABC878B1C932566924BBE28B7F800 /* KRLCollectionViewGridLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 57F1ABC7D451CBC7CF12B0D8BF7DF88D /* KRLCollectionViewGridLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		83126EA3B5E960F9A9C155CE3DACB9FB /* FConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C51D2FE3A431726F864E99477306E80 /* FConfig.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84754CB255B272AFEFE1ECF132DE7E93 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF59AEA1DA4100F9E2C879C2C9A69C11 /* Foundation.framework */; };
+		8A8B2E7318F9A52B0C8DCF4991BD88E5 /* Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = 1476DC9D073EBBD9D28B763970C8D30F /* Empty.m */; };
+		8F4F6C91327C6D43B7C6A83EBDC6184B /* FirebaseServerValue.h in Headers */ = {isa = PBXBuildFile; fileRef = E6834CE80955CFEB360E62532357B113 /* FirebaseServerValue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		92D23D8C8D1F4219213497DE92FED770 /* UIColor+JFMinimalNotificationColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 229CD54459E20B6787796B9B4B7F5F4B /* UIColor+JFMinimalNotificationColors.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		94648BFC13A47994DE2CD41C8DE7EB1C /* JFMinimalNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = 58A94E909E062EF993CB10ED14F52DD8 /* JFMinimalNotification.m */; };
+		9BEE41C7EA66644752DFBC43BD28205D /* JFMinimalNotifications-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CD63935FA8403AFBF5E53C9E5251A02 /* JFMinimalNotifications-dummy.m */; };
+		A5035EDCA2C178ABAC6CBF1C82D0C649 /* FMutableData.h in Headers */ = {isa = PBXBuildFile; fileRef = CB46F962C4610EA26F174BB9E353B866 /* FMutableData.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC79B204F800EAC241C599A9AF76E7DB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF59AEA1DA4100F9E2C879C2C9A69C11 /* Foundation.framework */; };
+		B54F2B51BDAC71C16689BF9146E9FEEA /* JFMinimalNotificationArt.m in Sources */ = {isa = PBXBuildFile; fileRef = 584DCD18E9FF991EDF398791EAB4CACD /* JFMinimalNotificationArt.m */; };
+		B7B41E32FB4ADB6C44FB3797B9BB77AE /* Firebase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ABD83BC2A79FA66BE98697B31775EB7 /* Firebase-dummy.m */; };
+		B89A4308CD40B0011195C7D370B4D8EF /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA44833A897ADBF9531D5C7759D787F4 /* SystemConfiguration.framework */; };
+		C9B2789B5C77981D226512D3AFA94AC2 /* Firebase.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C5B4DDAE5036A925798FA00C7A575A9 /* Firebase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CAFDD197DE530068EB91A783FC1F9023 /* KRLCollectionViewGridLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DD5B0E370BF3B8CB0C70ABB7CC45CEB2 /* KRLCollectionViewGridLayout-dummy.m */; };
+		CC8E46CD514ACD86DDFFF02ED1789A3E /* JFMinimalNotificationArt.h in Headers */ = {isa = PBXBuildFile; fileRef = 62406E8D37960602860884D3D440AB7B /* JFMinimalNotificationArt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D29D86661B99C954E8301C4157961A40 /* FTransactionResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 2847C65A47513CC24A4E0B51988683B4 /* FTransactionResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBECC29641A3EB65805EEA0EA063AE59 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */; };
+		EEE2B768180112A777548950CD0BE902 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C09F8BABCA871F23EA6D23B770019B71 /* CoreGraphics.framework */; };
+		F06664877754422D6FB53A1D8E4FE448 /* FAuthType.h in Headers */ = {isa = PBXBuildFile; fileRef = 5EA60C412702E5047B338F982F21B0F3 /* FAuthType.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F10FC8135FFEAB5829ADD65C12271A3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF59AEA1DA4100F9E2C879C2C9A69C11 /* Foundation.framework */; };
+		F63A4BEA92E9EB7FDDDBB4B80460A5D9 /* UIView+Round.h in Headers */ = {isa = PBXBuildFile; fileRef = FFA771238CF678447136AF127EE4B0E9 /* UIView+Round.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FBBC7D3B1CAED14BCEA140A684FFE09C /* NSInvocation+Constructors.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D1CDDF449F3D2381E533A1EB7F923D3 /* NSInvocation+Constructors.m */; };
+		FC18554D24943F3FEEBC7222C7FD8D10 /* FQuery.h in Headers */ = {isa = PBXBuildFile; fileRef = 454F24FEA238C67A7CD5CE4B08EBD55D /* FQuery.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		62C03813B9690C2E552E795683B62EF8 /* PBXContainerItemProxy */ = {
+		94E8CAF19CE8CE86DC1F49BECBCD6569 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4ABB5C3244D26C95528FF6879EC3B2FE;
 			remoteInfo = JFMinimalNotifications;
 		};
-		F91CDECFEC54B183AF976519CB87C21A /* PBXContainerItemProxy */ = {
+		A6C3F988E7BEA2AE056B94C3B971307E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B467EFF82E611A2ABF529897A3C5C91F;
 			remoteInfo = KRLCollectionViewGridLayout;
 		};
+		DA9322B2BCE71FC6B73F763D9FDE58DF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 569735B422E0E4CEEFC5C6955AFDE3A5;
+			remoteInfo = Firebase;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02871FB7A0F44E89084D5AD6C3B16707 /* JFMinimalNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFMinimalNotification.h; path = JFMinimalNotification/JFMinimalNotification.h; sourceTree = "<group>"; };
+		0F5D257A755DD4268DCCE2EEEA57B302 /* libKRLCollectionViewGridLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKRLCollectionViewGridLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		10834806BD7B412BC24F347361FA2C8E /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
-		1264325C4220C1BDC3C73E5D496129FD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		12E03DD3D37E96BBAB951D6337D0AB43 /* JFMinimalNotifications.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFMinimalNotifications.xcconfig; sourceTree = "<group>"; };
-		193748FEF724EB65F735F097CFF28BE2 /* KRLCollectionViewGridLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KRLCollectionViewGridLayout-dummy.m"; sourceTree = "<group>"; };
-		1F73513D86184DA06778E36019B8A1F9 /* JFMinimalNotifications-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFMinimalNotifications-prefix.pch"; sourceTree = "<group>"; };
+		1476DC9D073EBBD9D28B763970C8D30F /* Empty.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = Empty.m; sourceTree = "<group>"; };
+		1E9F0E5C4A6D04C28FD16DA1CBE8A496 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
+		20C52D52CFE5BF01AF64E4AC32192BD9 /* FDataSnapshot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FDataSnapshot.h; sourceTree = "<group>"; };
+		229CD54459E20B6787796B9B4B7F5F4B /* UIColor+JFMinimalNotificationColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+JFMinimalNotificationColors.h"; path = "JFMinimalNotification/UIColor+JFMinimalNotificationColors.h"; sourceTree = "<group>"; };
+		2677AB64D2762E495F220B79AD89869B /* UIView+Round.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Round.m"; path = "JFMinimalNotification/UIView+Round.m"; sourceTree = "<group>"; };
 		272643F56613CA0D336AE3DBF19DC404 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
-		33F1807CB9AB0F6DE8DE03BC71001722 /* KRLCollectionViewGridLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KRLCollectionViewGridLayout.xcconfig; sourceTree = "<group>"; };
+		2847C65A47513CC24A4E0B51988683B4 /* FTransactionResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FTransactionResult.h; sourceTree = "<group>"; };
+		2CD63935FA8403AFBF5E53C9E5251A02 /* JFMinimalNotifications-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JFMinimalNotifications-dummy.m"; sourceTree = "<group>"; };
 		37DB56D75062CC75FCB0966E1C6E8A8E /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
-		47B3BEDAB3FCC1F68FD05DB2E6F7EF36 /* JFMinimalNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JFMinimalNotification.m; path = JFMinimalNotification/JFMinimalNotification.m; sourceTree = "<group>"; };
-		49BB97262F3197DBB930078CFB159299 /* UIColor+JFMinimalNotificationColors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+JFMinimalNotificationColors.h"; path = "JFMinimalNotification/UIColor+JFMinimalNotificationColors.h"; sourceTree = "<group>"; };
+		4416F210ED4B646938C534D3C074EF69 /* JFMinimalNotifications-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JFMinimalNotifications-prefix.pch"; sourceTree = "<group>"; };
+		454F24FEA238C67A7CD5CE4B08EBD55D /* FQuery.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FQuery.h; sourceTree = "<group>"; };
+		4ABD83BC2A79FA66BE98697B31775EB7 /* Firebase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Firebase-dummy.m"; sourceTree = "<group>"; };
+		4CAAA559E50B5AC7C72A88970E7F01F3 /* libFirebase.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFirebase.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		57F1ABC7D451CBC7CF12B0D8BF7DF88D /* KRLCollectionViewGridLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KRLCollectionViewGridLayout.h; path = Classes/KRLCollectionViewGridLayout.h; sourceTree = "<group>"; };
+		584DCD18E9FF991EDF398791EAB4CACD /* JFMinimalNotificationArt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JFMinimalNotificationArt.m; path = JFMinimalNotification/JFMinimalNotificationArt.m; sourceTree = "<group>"; };
+		58A94E909E062EF993CB10ED14F52DD8 /* JFMinimalNotification.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JFMinimalNotification.m; path = JFMinimalNotification/JFMinimalNotification.m; sourceTree = "<group>"; };
+		58AEE45F608E207AC8CCC090853F1B44 /* KRLCollectionViewGridLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = KRLCollectionViewGridLayout.xcconfig; sourceTree = "<group>"; };
+		5EA60C412702E5047B338F982F21B0F3 /* FAuthType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthType.h; sourceTree = "<group>"; };
+		62406E8D37960602860884D3D440AB7B /* JFMinimalNotificationArt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFMinimalNotificationArt.h; path = JFMinimalNotification/JFMinimalNotificationArt.h; sourceTree = "<group>"; };
 		6911BECA35E7518D864239B7E898EEF3 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
-		6E093D627869B650AB8D6411D2DE6B7A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7473597AE5EAC1CB7B1BFEE419C88E80 /* KRLCollectionViewGridLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRLCollectionViewGridLayout-prefix.pch"; sourceTree = "<group>"; };
-		74BF23F4969573EC085AEB716A228DF5 /* libKRLCollectionViewGridLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libKRLCollectionViewGridLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7CD0375A3815158E607ED74EFFDC3728 /* UIView+Round.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Round.h"; path = "JFMinimalNotification/UIView+Round.h"; sourceTree = "<group>"; };
-		8568EB3990EDE4D2EAA3E8A99AD47687 /* NSInvocation+Constructors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Constructors.h"; path = "JFMinimalNotification/NSInvocation+Constructors.h"; sourceTree = "<group>"; };
-		8694C91FDC0B7E4869C97B5CC36056BE /* JFMinimalNotifications-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JFMinimalNotifications-dummy.m"; sourceTree = "<group>"; };
-		9049A97B4310A658478C26D7819EE609 /* JFMinimalNotificationArt.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JFMinimalNotificationArt.m; path = JFMinimalNotification/JFMinimalNotificationArt.m; sourceTree = "<group>"; };
+		6AAB27CE46795D32E4D4FE8B041520EE /* JFMinimalNotification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFMinimalNotification.h; path = JFMinimalNotification/JFMinimalNotification.h; sourceTree = "<group>"; };
+		7AC9596DBC95ED347884D709D9253CC1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C5B4DDAE5036A925798FA00C7A575A9 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = Firebase.h; sourceTree = "<group>"; };
 		98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
-		9EAB34F52E1F882A330EEAB9A6564FB4 /* JFMinimalNotificationArt.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JFMinimalNotificationArt.h; path = JFMinimalNotification/JFMinimalNotificationArt.h; sourceTree = "<group>"; };
+		9A1C56F0B1D4E42D8654BBE063DF4DA0 /* FEventType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FEventType.h; sourceTree = "<group>"; };
+		9C51D2FE3A431726F864E99477306E80 /* FConfig.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FConfig.h; sourceTree = "<group>"; };
+		9D1CDDF449F3D2381E533A1EB7F923D3 /* NSInvocation+Constructors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Constructors.m"; path = "JFMinimalNotification/NSInvocation+Constructors.m"; sourceTree = "<group>"; };
 		A1A36D34413696BE466E2CA0AFF194DA /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
-		A4FFE63D8BE842A01D3CBF476E14286F /* UIColor+JFMinimalNotificationColors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+JFMinimalNotificationColors.m"; path = "JFMinimalNotification/UIColor+JFMinimalNotificationColors.m"; sourceTree = "<group>"; };
-		AD257A0A70C7E661F002ED1067A8177F /* UIView+Round.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIView+Round.m"; path = "JFMinimalNotification/UIView+Round.m"; sourceTree = "<group>"; };
-		B6E2B122C8D91E63B2276F4DC378AB8C /* KRLCollectionViewGridLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = KRLCollectionViewGridLayout.h; path = Classes/KRLCollectionViewGridLayout.h; sourceTree = "<group>"; };
+		A9CF1C0B7AEBDD59391FA53F8E5A3298 /* libFirebaseStatic.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; path = libFirebaseStatic.a; sourceTree = "<group>"; };
+		AB70A7FFDCDF83DF04609FA37C6D35B0 /* Firebase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Firebase-prefix.pch"; sourceTree = "<group>"; };
+		B1AC7138C84EBF62F01FF4680A524780 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		B4CD906B24C1024703BACBC39857D203 /* FAuthData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FAuthData.h; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BB6B77C4DE707D473051F4A0317A60D4 /* NSInvocation+Constructors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSInvocation+Constructors.m"; path = "JFMinimalNotification/NSInvocation+Constructors.m"; sourceTree = "<group>"; };
-		D668DEB80415632F03DBF582D8F7CFCD /* libJFMinimalNotifications.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJFMinimalNotifications.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		EBF955C4529C0B2D0F6D7E8EF5A10336 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		FC3983E8D5F2B20BF3874EF76F827124 /* KRLCollectionViewGridLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KRLCollectionViewGridLayout.m; path = Classes/KRLCollectionViewGridLayout.m; sourceTree = "<group>"; };
+		C09F8BABCA871F23EA6D23B770019B71 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		C3B641FA2D5ACE9B6F5B920263F5C57F /* Firebase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Firebase.xcconfig; sourceTree = "<group>"; };
+		C4006F14EA2D5171BA82B7385721E858 /* KRLCollectionViewGridLayout.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = KRLCollectionViewGridLayout.m; path = Classes/KRLCollectionViewGridLayout.m; sourceTree = "<group>"; };
+		C53473E4303D4E9A5DC7B996EB158B8F /* NSInvocation+Constructors.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSInvocation+Constructors.h"; path = "JFMinimalNotification/NSInvocation+Constructors.h"; sourceTree = "<group>"; };
+		CB46F962C4610EA26F174BB9E353B866 /* FMutableData.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FMutableData.h; sourceTree = "<group>"; };
+		CCA83D32458598D2D2E88DBC06A884BA /* JFMinimalNotifications.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JFMinimalNotifications.xcconfig; sourceTree = "<group>"; };
+		DD5B0E370BF3B8CB0C70ABB7CC45CEB2 /* KRLCollectionViewGridLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "KRLCollectionViewGridLayout-dummy.m"; sourceTree = "<group>"; };
+		DE3C8FC571F36C4E02AB3168AE2B4E8D /* KRLCollectionViewGridLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "KRLCollectionViewGridLayout-prefix.pch"; sourceTree = "<group>"; };
+		E6834CE80955CFEB360E62532357B113 /* FirebaseServerValue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseServerValue.h; sourceTree = "<group>"; };
+		E82838792D0C333EC1111EBA651E4E28 /* libJFMinimalNotifications.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libJFMinimalNotifications.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB677168638A8D988502DF8BF0417D21 /* UIColor+JFMinimalNotificationColors.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+JFMinimalNotificationColors.m"; path = "JFMinimalNotification/UIColor+JFMinimalNotificationColors.m"; sourceTree = "<group>"; };
+		EF59AEA1DA4100F9E2C879C2C9A69C11 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		FA44833A897ADBF9531D5C7759D787F4 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
+		FF7B0DB7FF6DC121615E92B6920DE291 /* FirebaseApp.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FirebaseApp.h; sourceTree = "<group>"; };
+		FFA771238CF678447136AF127EE4B0E9 /* UIView+Round.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIView+Round.h"; path = "JFMinimalNotification/UIView+Round.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4B5F31A0AB37BCEAEA69442EA2350A75 /* Frameworks */ = {
+		517AD8D3904844B971845D1995E200D7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A43C8B98729A4449BD0DCD2A7429466 /* Foundation.framework in Frameworks */,
+				3D9C6D8D9075C09C12E53E0D5B06F15E /* CFNetwork.framework in Frameworks */,
+				84754CB255B272AFEFE1ECF132DE7E93 /* Foundation.framework in Frameworks */,
+				71DF67850774658371D1DFD4DF5186E7 /* Security.framework in Frameworks */,
+				B89A4308CD40B0011195C7D370B4D8EF /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +141,14 @@
 			files = (
 				EEE2B768180112A777548950CD0BE902 /* CoreGraphics.framework in Frameworks */,
 				AC79B204F800EAC241C599A9AF76E7DB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DB52E312623464DCA15E6F2E3CF13648 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F10FC8135FFEAB5829ADD65C12271A3E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,90 +171,107 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		04E29E010F7F1DCB2797F94459E4D260 /* Products */ = {
+		0808B8660C197F92EA30C206C10266E6 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D668DEB80415632F03DBF582D8F7CFCD /* libJFMinimalNotifications.a */,
-				74BF23F4969573EC085AEB716A228DF5 /* libKRLCollectionViewGridLayout.a */,
-				EBF955C4529C0B2D0F6D7E8EF5A10336 /* libPods.a */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		36C06A02A00144C64CD7282BA31846BD /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				1264325C4220C1BDC3C73E5D496129FD /* CoreGraphics.framework */,
-				6E093D627869B650AB8D6411D2DE6B7A /* Foundation.framework */,
+				1E9F0E5C4A6D04C28FD16DA1CBE8A496 /* CFNetwork.framework */,
+				C09F8BABCA871F23EA6D23B770019B71 /* CoreGraphics.framework */,
+				EF59AEA1DA4100F9E2C879C2C9A69C11 /* Foundation.framework */,
+				B1AC7138C84EBF62F01FF4680A524780 /* Security.framework */,
+				FA44833A897ADBF9531D5C7759D787F4 /* SystemConfiguration.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		08A97E4FF1D18003EF13C993AEAE40FC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				36C06A02A00144C64CD7282BA31846BD /* iOS */,
+				58AEE45F608E207AC8CCC090853F1B44 /* KRLCollectionViewGridLayout.xcconfig */,
+				DD5B0E370BF3B8CB0C70ABB7CC45CEB2 /* KRLCollectionViewGridLayout-dummy.m */,
+				DE3C8FC571F36C4E02AB3168AE2B4E8D /* KRLCollectionViewGridLayout-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/KRLCollectionViewGridLayout";
+			sourceTree = "<group>";
+		};
+		20B56609144CE204DFA8221F742B2D76 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0808B8660C197F92EA30C206C10266E6 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		5E9C8A2D1B98A13DB2957289F5565240 /* Support Files */ = {
+		50ABCE09255D31DF6570EDA96EDE4F65 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				12E03DD3D37E96BBAB951D6337D0AB43 /* JFMinimalNotifications.xcconfig */,
-				8694C91FDC0B7E4869C97B5CC36056BE /* JFMinimalNotifications-dummy.m */,
-				1F73513D86184DA06778E36019B8A1F9 /* JFMinimalNotifications-prefix.pch */,
+				4CAAA559E50B5AC7C72A88970E7F01F3 /* libFirebase.a */,
+				E82838792D0C333EC1111EBA651E4E28 /* libJFMinimalNotifications.a */,
+				0F5D257A755DD4268DCCE2EEEA57B302 /* libKRLCollectionViewGridLayout.a */,
+				7AC9596DBC95ED347884D709D9253CC1 /* libPods.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		630B88A25E16A8856BFBAA0ECAA1C411 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9CF1C0B7AEBDD59391FA53F8E5A3298 /* libFirebaseStatic.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		69D217D7600E4915364C5E92F758CA04 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CCA83D32458598D2D2E88DBC06A884BA /* JFMinimalNotifications.xcconfig */,
+				2CD63935FA8403AFBF5E53C9E5251A02 /* JFMinimalNotifications-dummy.m */,
+				4416F210ED4B646938C534D3C074EF69 /* JFMinimalNotifications-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/JFMinimalNotifications";
 			sourceTree = "<group>";
 		};
-		66D6749422FBD2134A6418355FBE67E1 /* JFMinimalNotifications */ = {
+		7776FEBD49B286D41F7DC6B253873D4F /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				02871FB7A0F44E89084D5AD6C3B16707 /* JFMinimalNotification.h */,
-				47B3BEDAB3FCC1F68FD05DB2E6F7EF36 /* JFMinimalNotification.m */,
-				9EAB34F52E1F882A330EEAB9A6564FB4 /* JFMinimalNotificationArt.h */,
-				9049A97B4310A658478C26D7819EE609 /* JFMinimalNotificationArt.m */,
-				8568EB3990EDE4D2EAA3E8A99AD47687 /* NSInvocation+Constructors.h */,
-				BB6B77C4DE707D473051F4A0317A60D4 /* NSInvocation+Constructors.m */,
-				49BB97262F3197DBB930078CFB159299 /* UIColor+JFMinimalNotificationColors.h */,
-				A4FFE63D8BE842A01D3CBF476E14286F /* UIColor+JFMinimalNotificationColors.m */,
-				7CD0375A3815158E607ED74EFFDC3728 /* UIView+Round.h */,
-				AD257A0A70C7E661F002ED1067A8177F /* UIView+Round.m */,
-				5E9C8A2D1B98A13DB2957289F5565240 /* Support Files */,
+				1476DC9D073EBBD9D28B763970C8D30F /* Empty.m */,
+				B4CD906B24C1024703BACBC39857D203 /* FAuthData.h */,
+				5EA60C412702E5047B338F982F21B0F3 /* FAuthType.h */,
+				9C51D2FE3A431726F864E99477306E80 /* FConfig.h */,
+				20C52D52CFE5BF01AF64E4AC32192BD9 /* FDataSnapshot.h */,
+				9A1C56F0B1D4E42D8654BBE063DF4DA0 /* FEventType.h */,
+				7C5B4DDAE5036A925798FA00C7A575A9 /* Firebase.h */,
+				FF7B0DB7FF6DC121615E92B6920DE291 /* FirebaseApp.h */,
+				E6834CE80955CFEB360E62532357B113 /* FirebaseServerValue.h */,
+				CB46F962C4610EA26F174BB9E353B866 /* FMutableData.h */,
+				454F24FEA238C67A7CD5CE4B08EBD55D /* FQuery.h */,
+				2847C65A47513CC24A4E0B51988683B4 /* FTransactionResult.h */,
+				630B88A25E16A8856BFBAA0ECAA1C411 /* Frameworks */,
+				CDF101848924057DBDFD3B84B380FD0C /* Support Files */,
 			);
-			path = JFMinimalNotifications;
+			path = Firebase;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				9979C7294C99E439F4B6BA9519DC7013 /* Pods */,
-				04E29E010F7F1DCB2797F94459E4D260 /* Products */,
+				20B56609144CE204DFA8221F742B2D76 /* Frameworks */,
+				90AE4A6A45FF266BDCA021CE7FB3000C /* Pods */,
+				50ABCE09255D31DF6570EDA96EDE4F65 /* Products */,
 				037C0CA694176A3C0915F62C9D20B3E6 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		9979C7294C99E439F4B6BA9519DC7013 /* Pods */ = {
+		90AE4A6A45FF266BDCA021CE7FB3000C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				66D6749422FBD2134A6418355FBE67E1 /* JFMinimalNotifications */,
-				9BA15D2F597A679F1D033B81C332C152 /* KRLCollectionViewGridLayout */,
+				7776FEBD49B286D41F7DC6B253873D4F /* Firebase */,
+				CF3F5691BA6F2E0FDB619973D593EFC2 /* JFMinimalNotifications */,
+				F8193A48405AF9CA849D6FBB83BB76B5 /* KRLCollectionViewGridLayout */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
-		};
-		9BA15D2F597A679F1D033B81C332C152 /* KRLCollectionViewGridLayout */ = {
-			isa = PBXGroup;
-			children = (
-				B6E2B122C8D91E63B2276F4DC378AB8C /* KRLCollectionViewGridLayout.h */,
-				FC3983E8D5F2B20BF3874EF76F827124 /* KRLCollectionViewGridLayout.m */,
-				F5994FDCDAC5AF2DCA8098D330CE7122 /* Support Files */,
-			);
-			path = KRLCollectionViewGridLayout;
 			sourceTree = "<group>";
 		};
 		B3D1D13E0C6553800746CB8FD61CF946 /* Pods */ = {
@@ -217,20 +289,66 @@
 			path = "Target Support Files/Pods";
 			sourceTree = "<group>";
 		};
-		F5994FDCDAC5AF2DCA8098D330CE7122 /* Support Files */ = {
+		CDF101848924057DBDFD3B84B380FD0C /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				33F1807CB9AB0F6DE8DE03BC71001722 /* KRLCollectionViewGridLayout.xcconfig */,
-				193748FEF724EB65F735F097CFF28BE2 /* KRLCollectionViewGridLayout-dummy.m */,
-				7473597AE5EAC1CB7B1BFEE419C88E80 /* KRLCollectionViewGridLayout-prefix.pch */,
+				C3B641FA2D5ACE9B6F5B920263F5C57F /* Firebase.xcconfig */,
+				4ABD83BC2A79FA66BE98697B31775EB7 /* Firebase-dummy.m */,
+				AB70A7FFDCDF83DF04609FA37C6D35B0 /* Firebase-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/KRLCollectionViewGridLayout";
+			path = "../Target Support Files/Firebase";
+			sourceTree = "<group>";
+		};
+		CF3F5691BA6F2E0FDB619973D593EFC2 /* JFMinimalNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				6AAB27CE46795D32E4D4FE8B041520EE /* JFMinimalNotification.h */,
+				58A94E909E062EF993CB10ED14F52DD8 /* JFMinimalNotification.m */,
+				62406E8D37960602860884D3D440AB7B /* JFMinimalNotificationArt.h */,
+				584DCD18E9FF991EDF398791EAB4CACD /* JFMinimalNotificationArt.m */,
+				C53473E4303D4E9A5DC7B996EB158B8F /* NSInvocation+Constructors.h */,
+				9D1CDDF449F3D2381E533A1EB7F923D3 /* NSInvocation+Constructors.m */,
+				229CD54459E20B6787796B9B4B7F5F4B /* UIColor+JFMinimalNotificationColors.h */,
+				EB677168638A8D988502DF8BF0417D21 /* UIColor+JFMinimalNotificationColors.m */,
+				FFA771238CF678447136AF127EE4B0E9 /* UIView+Round.h */,
+				2677AB64D2762E495F220B79AD89869B /* UIView+Round.m */,
+				69D217D7600E4915364C5E92F758CA04 /* Support Files */,
+			);
+			path = JFMinimalNotifications;
+			sourceTree = "<group>";
+		};
+		F8193A48405AF9CA849D6FBB83BB76B5 /* KRLCollectionViewGridLayout */ = {
+			isa = PBXGroup;
+			children = (
+				57F1ABC7D451CBC7CF12B0D8BF7DF88D /* KRLCollectionViewGridLayout.h */,
+				C4006F14EA2D5171BA82B7385721E858 /* KRLCollectionViewGridLayout.m */,
+				08A97E4FF1D18003EF13C993AEAE40FC /* Support Files */,
+			);
+			path = KRLCollectionViewGridLayout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		11B07EDA26BA9DAE2415B87999509E89 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				075979D6A80AA907E8C15434C532C221 /* FAuthData.h in Headers */,
+				F06664877754422D6FB53A1D8E4FE448 /* FAuthType.h in Headers */,
+				83126EA3B5E960F9A9C155CE3DACB9FB /* FConfig.h in Headers */,
+				6EE911B933800447253BC3935A13E65E /* FDataSnapshot.h in Headers */,
+				3FD61871A384128BD423ECB516B54AC8 /* FEventType.h in Headers */,
+				C9B2789B5C77981D226512D3AFA94AC2 /* Firebase.h in Headers */,
+				6A1B1829F5A55FB2979D58FB8F957AD7 /* FirebaseApp.h in Headers */,
+				8F4F6C91327C6D43B7C6A83EBDC6184B /* FirebaseServerValue.h in Headers */,
+				A5035EDCA2C178ABAC6CBF1C82D0C649 /* FMutableData.h in Headers */,
+				FC18554D24943F3FEEBC7222C7FD8D10 /* FQuery.h in Headers */,
+				D29D86661B99C954E8301C4157961A40 /* FTransactionResult.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		56B63E6C8F0CBD3F8724928FA988AC99 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -268,25 +386,24 @@
 			);
 			name = JFMinimalNotifications;
 			productName = JFMinimalNotifications;
-			productReference = D668DEB80415632F03DBF582D8F7CFCD /* libJFMinimalNotifications.a */;
+			productReference = E82838792D0C333EC1111EBA651E4E28 /* libJFMinimalNotifications.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		AA1247B6E293763418C776CF95027522 /* Pods */ = {
+		569735B422E0E4CEEFC5C6955AFDE3A5 /* Firebase */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5D4E34013B7CDF88BBCE88C5F7D4FC4 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildConfigurationList = 048D8D02C9F5F6B4FAB719C7488039B1 /* Build configuration list for PBXNativeTarget "Firebase" */;
 			buildPhases = (
-				D5A72D98EF3CBA2252A3DF568A8D5029 /* Sources */,
-				4B5F31A0AB37BCEAEA69442EA2350A75 /* Frameworks */,
+				4FDE5E0B37287615FB2FA4693FF4F294 /* Sources */,
+				517AD8D3904844B971845D1995E200D7 /* Frameworks */,
+				11B07EDA26BA9DAE2415B87999509E89 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				90756B37FAB2BA3C2D7C4C07095D3307 /* PBXTargetDependency */,
-				63965EA73DC4ADBE14BDE6C2864947B7 /* PBXTargetDependency */,
 			);
-			name = Pods;
-			productName = Pods;
-			productReference = EBF955C4529C0B2D0F6D7E8EF5A10336 /* libPods.a */;
+			name = Firebase;
+			productName = Firebase;
+			productReference = 4CAAA559E50B5AC7C72A88970E7F01F3 /* libFirebase.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		B467EFF82E611A2ABF529897A3C5C91F /* KRLCollectionViewGridLayout */ = {
@@ -303,7 +420,26 @@
 			);
 			name = KRLCollectionViewGridLayout;
 			productName = KRLCollectionViewGridLayout;
-			productReference = 74BF23F4969573EC085AEB716A228DF5 /* libKRLCollectionViewGridLayout.a */;
+			productReference = 0F5D257A755DD4268DCCE2EEEA57B302 /* libKRLCollectionViewGridLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EB4073961800857E0E0DCA08C82EF93D /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7DC5B620A504CB59CBCA01ED377856C /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				A143D20676ACF335BBDE46D1B102DA83 /* Sources */,
+				DB52E312623464DCA15E6F2E3CF13648 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5DDF8838DE9C38506DE64089D91D01B /* PBXTargetDependency */,
+				6AB1E31620DA9376EBE2F80635F69155 /* PBXTargetDependency */,
+				9B9E7600638B6B7EA51D8F8D33411139 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 7AC9596DBC95ED347884D709D9253CC1 /* libPods.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -323,13 +459,14 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 04E29E010F7F1DCB2797F94459E4D260 /* Products */;
+			productRefGroup = 50ABCE09255D31DF6570EDA96EDE4F65 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				569735B422E0E4CEEFC5C6955AFDE3A5 /* Firebase */,
 				4ABB5C3244D26C95528FF6879EC3B2FE /* JFMinimalNotifications */,
 				B467EFF82E611A2ABF529897A3C5C91F /* KRLCollectionViewGridLayout */,
-				AA1247B6E293763418C776CF95027522 /* Pods */,
+				EB4073961800857E0E0DCA08C82EF93D /* Pods */,
 			);
 		};
 /* End PBXProject section */
@@ -348,6 +485,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4FDE5E0B37287615FB2FA4693FF4F294 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A8B2E7318F9A52B0C8DCF4991BD88E5 /* Empty.m in Sources */,
+				B7B41E32FB4ADB6C44FB3797B9BB77AE /* Firebase-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6C0CE7B3FD4F61187E47304AD452B6A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -357,35 +503,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D5A72D98EF3CBA2252A3DF568A8D5029 /* Sources */ = {
+		A143D20676ACF335BBDE46D1B102DA83 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				12A1E3F019165E2410FF2E90EBDB3CD2 /* Pods-dummy.m in Sources */,
+				DBECC29641A3EB65805EEA0EA063AE59 /* Pods-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		63965EA73DC4ADBE14BDE6C2864947B7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = KRLCollectionViewGridLayout;
-			target = B467EFF82E611A2ABF529897A3C5C91F /* KRLCollectionViewGridLayout */;
-			targetProxy = F91CDECFEC54B183AF976519CB87C21A /* PBXContainerItemProxy */;
-		};
-		90756B37FAB2BA3C2D7C4C07095D3307 /* PBXTargetDependency */ = {
+		6AB1E31620DA9376EBE2F80635F69155 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = JFMinimalNotifications;
 			target = 4ABB5C3244D26C95528FF6879EC3B2FE /* JFMinimalNotifications */;
-			targetProxy = 62C03813B9690C2E552E795683B62EF8 /* PBXContainerItemProxy */;
+			targetProxy = 94E8CAF19CE8CE86DC1F49BECBCD6569 /* PBXContainerItemProxy */;
+		};
+		9B9E7600638B6B7EA51D8F8D33411139 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = KRLCollectionViewGridLayout;
+			target = B467EFF82E611A2ABF529897A3C5C91F /* KRLCollectionViewGridLayout */;
+			targetProxy = A6C3F988E7BEA2AE056B94C3B971307E /* PBXContainerItemProxy */;
+		};
+		A5DDF8838DE9C38506DE64089D91D01B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Firebase;
+			target = 569735B422E0E4CEEFC5C6955AFDE3A5 /* Firebase */;
+			targetProxy = DA9322B2BCE71FC6B73F763D9FDE58DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		24B35D086ACA3CAE8AC75665B28B6301 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12E03DD3D37E96BBAB951D6337D0AB43 /* JFMinimalNotifications.xcconfig */;
+			baseConfigurationReference = CCA83D32458598D2D2E88DBC06A884BA /* JFMinimalNotifications.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/JFMinimalNotifications/JFMinimalNotifications-prefix.pch";
@@ -401,7 +553,43 @@
 			};
 			name = Debug;
 		};
-		5C2A0DBC89FF133C0F2717830A6BAAD4 /* Debug */ = {
+		32832F3EF67B2D936857066DF3616ECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3B641FA2D5ACE9B6F5B920263F5C57F /* Firebase.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		4C761883060D484858BD5B5D5C2CF5B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3B641FA2D5ACE9B6F5B920263F5C57F /* Firebase.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Firebase/Firebase-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		615209F5182D4AD3A36525DAEC2C2A2B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4E762F23EC34ED4A6FF3312D84E33A40 /* Pods.debug.xcconfig */;
 			buildSettings = {
@@ -418,26 +606,9 @@
 			};
 			name = Debug;
 		};
-		6209AD925449784D10DA85F0E8552D46 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
-			buildSettings = {
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 		7E474A318D359C60E953E45FB5899C83 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12E03DD3D37E96BBAB951D6337D0AB43 /* JFMinimalNotifications.xcconfig */;
+			baseConfigurationReference = CCA83D32458598D2D2E88DBC06A884BA /* JFMinimalNotifications.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/JFMinimalNotifications/JFMinimalNotifications-prefix.pch";
@@ -455,7 +626,7 @@
 		};
 		9AF444464A4DAF45CA714A12601B7F2C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33F1807CB9AB0F6DE8DE03BC71001722 /* KRLCollectionViewGridLayout.xcconfig */;
+			baseConfigurationReference = 58AEE45F608E207AC8CCC090853F1B44 /* KRLCollectionViewGridLayout.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/KRLCollectionViewGridLayout/KRLCollectionViewGridLayout-prefix.pch";
@@ -470,6 +641,23 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
+		};
+		9DB7030B8D867C830F4C9EC090E7218B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98C98CDFB3F20F2925F6CD1F141BB14F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
 		};
 		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -512,7 +700,7 @@
 		};
 		C8AE764FFC72E2A7BD534D7814ECB9A9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 33F1807CB9AB0F6DE8DE03BC71001722 /* KRLCollectionViewGridLayout.xcconfig */;
+			baseConfigurationReference = 58AEE45F608E207AC8CCC090853F1B44 /* KRLCollectionViewGridLayout.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/KRLCollectionViewGridLayout/KRLCollectionViewGridLayout-prefix.pch";
@@ -565,6 +753,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		048D8D02C9F5F6B4FAB719C7488039B1 /* Build configuration list for PBXNativeTarget "Firebase" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C761883060D484858BD5B5D5C2CF5B7 /* Debug */,
+				32832F3EF67B2D936857066DF3616ECB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		066C5AE04D6B09BA924430BCDE4A9D66 /* Build configuration list for PBXNativeTarget "KRLCollectionViewGridLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -592,11 +789,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5D4E34013B7CDF88BBCE88C5F7D4FC4 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+		B7DC5B620A504CB59CBCA01ED377856C /* Build configuration list for PBXNativeTarget "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5C2A0DBC89FF133C0F2717830A6BAAD4 /* Debug */,
-				6209AD925449784D10DA85F0E8552D46 /* Release */,
+				615209F5182D4AD3A36525DAEC2C2A2B /* Debug */,
+				9DB7030B8D867C830F4C9EC090E7218B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

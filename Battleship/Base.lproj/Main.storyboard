@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Zez-e2-aeP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
@@ -78,7 +78,77 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="305" y="429"/>
+            <point key="canvasLocation" x="1279" y="-74"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cZb-9c-Luc">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="Zez-e2-aeP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Net-tZ-MwK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Rq9-FY-K2S" kind="relationship" relationship="rootViewController" id="QiA-a3-xBC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ydx-7s-Neb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="10" y="-74"/>
+        </scene>
+        <!--Splash Screen Controller-->
+        <scene sceneID="klt-K8-vCv">
+            <objects>
+                <viewController id="Rq9-FY-K2S" customClass="SplashScreenController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AWK-I5-AZF"/>
+                        <viewControllerLayoutGuide type="bottom" id="jRL-y1-a6d"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gG8-zZ-ytH">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ksA-ga-FvW">
+                                <rect key="frame" x="264" y="184" width="73" height="30"/>
+                                <state key="normal" title="Join Game"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="JoinGame" id="GhF-aY-Nn5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvy-1T-QoW">
+                                <rect key="frame" x="262" y="212" width="77" height="30"/>
+                                <state key="normal" title="Host Game"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="HostGame" id="N78-Gg-QCi"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bSq-Pu-FYw">
+                                <rect key="frame" x="252" y="146" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="45X-wk-MVf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bSq-Pu-FYw" firstAttribute="top" secondItem="AWK-I5-AZF" secondAttribute="bottom" constant="126" id="0Ws-TE-kd3"/>
+                            <constraint firstItem="bSq-Pu-FYw" firstAttribute="centerX" secondItem="gG8-zZ-ytH" secondAttribute="centerX" id="3nP-s1-z7u"/>
+                            <constraint firstItem="cvy-1T-QoW" firstAttribute="top" secondItem="bSq-Pu-FYw" secondAttribute="bottom" constant="36" id="8Do-2F-EbG"/>
+                            <constraint firstItem="ksA-ga-FvW" firstAttribute="centerX" secondItem="bSq-Pu-FYw" secondAttribute="centerX" id="ZKn-YZ-kmQ"/>
+                            <constraint firstItem="ksA-ga-FvW" firstAttribute="top" secondItem="bSq-Pu-FYw" secondAttribute="bottom" constant="8" symbolic="YES" id="cS6-hx-Cnb"/>
+                            <constraint firstItem="cvy-1T-QoW" firstAttribute="centerX" secondItem="ksA-ga-FvW" secondAttribute="centerX" id="xzt-DK-5U2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="IaK-vJ-GlQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2n2-6C-C4H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="638" y="-74"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="N78-Gg-QCi"/>
+    </inferredMetricsTieBreakers>
 </document>

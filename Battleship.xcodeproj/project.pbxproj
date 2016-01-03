@@ -14,6 +14,7 @@
 		4D5B9CAC1C36F60B004A1B02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5B9CAA1C36F60B004A1B02 /* Main.storyboard */; };
 		4D5B9CAE1C36F60B004A1B02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D5B9CAD1C36F60B004A1B02 /* Assets.xcassets */; };
 		4D5B9CB11C36F60B004A1B02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D5B9CAF1C36F60B004A1B02 /* LaunchScreen.storyboard */; };
+		4DB5E7C41C38824D00899486 /* SplashScreenController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DB5E7C31C38824D00899486 /* SplashScreenController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		4D5B9CAD1C36F60B004A1B02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4D5B9CB01C36F60B004A1B02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4D5B9CB21C36F60B004A1B02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DB5E7C21C38824D00899486 /* SplashScreenController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashScreenController.h; sourceTree = "<group>"; };
+		4DB5E7C31C38824D00899486 /* SplashScreenController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashScreenController.m; sourceTree = "<group>"; };
 		7D1D08DC54A5276695D2D88D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		EFB23B8C26C986311078D842 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,6 +80,8 @@
 				4D5B9CA51C36F60B004A1B02 /* AppDelegate.m */,
 				4D5B9CA71C36F60B004A1B02 /* ViewController.h */,
 				4D5B9CA81C36F60B004A1B02 /* ViewController.m */,
+				4DB5E7C21C38824D00899486 /* SplashScreenController.h */,
+				4DB5E7C31C38824D00899486 /* SplashScreenController.m */,
 				4D5B9CAA1C36F60B004A1B02 /* Main.storyboard */,
 				4D5B9CAD1C36F60B004A1B02 /* Assets.xcassets */,
 				4D5B9CAF1C36F60B004A1B02 /* LaunchScreen.storyboard */,
@@ -137,6 +142,7 @@
 				TargetAttributes = {
 					4D5B9C9D1C36F60B004A1B02 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = F9PGNEMEHU;
 					};
 				};
 			};
@@ -226,6 +232,7 @@
 			files = (
 				4D5B9CA91C36F60B004A1B02 /* ViewController.m in Sources */,
 				4D5B9CA61C36F60B004A1B02 /* AppDelegate.m in Sources */,
+				4DB5E7C41C38824D00899486 /* SplashScreenController.m in Sources */,
 				4D5B9CA31C36F60B004A1B02 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,10 +344,14 @@
 			baseConfigurationReference = 7D1D08DC54A5276695D2D88D /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Battleship/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eel.Battleship;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -349,10 +360,14 @@
 			baseConfigurationReference = EFB23B8C26C986311078D842 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Battleship/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eel.Battleship;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

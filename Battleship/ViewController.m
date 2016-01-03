@@ -10,6 +10,8 @@
 #import "KRLCollectionViewGridLayout.h"
 #import "JFMinimalNotification.h"
 
+#import <Firebase/Firebase.h>
+
 @interface ViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate>
 @property (weak, nonatomic) IBOutlet UICollectionView *opponentGridView;
 @property (weak, nonatomic) IBOutlet UICollectionView *playerGridView;
@@ -24,8 +26,8 @@
 
 @property (strong, nonatomic) UILabel *passToNextPlayerView;
 @property (strong, nonatomic) JFMinimalNotification *minimalNotification;
-
-@property (nonatomic) BOOL isFirstPlayersTurn;
+@property (strong, nonatomic) JFMinimalNotification *minimalBadNotification;
+@property (strong, nonatomic) Firebase *fireBase;
 
 @end
 
@@ -34,6 +36,83 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.fireBase = [[Firebase alloc] initWithUrl:@"https://glaring-torch-3118.firebaseio.com"];
+    
+    [self.fireBase observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+        if ([[snapshot.value valueForKey:@"p1state"] isEqualToString:@"killed"]) {
+            if (self.isPlayer1) {
+                [self.minimalNotification show];
+            }else{
+                [self.minimalBadNotification show];
+            }
+            
+            [self.fireBase updateChildValues:@{@"p1state" : @"waiting"}];
+            [self reloadGrids];
+            return;
+        }
+        
+        if ([[snapshot.value valueForKey:@"p2state"] isEqualToString:@"killed"]) {
+            if (self.isPlayer1) {
+                [self.minimalBadNotification show];
+            }else{
+                [self.minimalNotification show];
+            }
+            
+            [self.fireBase updateChildValues:@{@"p2state" : @"waiting"}];
+            [self reloadGrids];
+            return;
+        }
+        
+        if ([[snapshot.value valueForKey:@"win"] isEqualToString:@"1"]) {
+            UIAlertController *alert =  [[UIAlertController alertControllerWithTitle:@"Game Over" message:@"Player 1 wins." preferredStyle:UIAlertControllerStyleAlert] init];
+            
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"Reset" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                [self setupGame];
+                [self.navigationController popToRootViewControllerAnimated:YES];
+                [alert dismissViewControllerAnimated:YES completion:nil];
+            }];
+            
+            [alert addAction:action];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+            
+        }
+        
+        else if([[snapshot.value valueForKey:@"win"] isEqualToString:@"2"]){
+            UIAlertController *alert =  [[UIAlertController alertControllerWithTitle:@"Game Over" message:@"Player 2 wins." preferredStyle:UIAlertControllerStyleAlert] init];
+            
+            UIAlertAction *action = [UIAlertAction actionWithTitle:@"Reset" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                [self setupGame];
+                [self.navigationController popToRootViewControllerAnimated:YES];
+                [alert dismissViewControllerAnimated:YES completion:nil];
+            }];
+            
+            [alert addAction:action];
+            
+            [self presentViewController:alert animated:YES completion:nil];
+        }
+        
+        if ((self.isPlayer1 && [[snapshot.value valueForKey:@"p1state"] isEqualToString:@"placement"]) || (!self.isPlayer1 && [[snapshot.value valueForKey:@"p2state"] isEqualToString:@"placement"])) {
+            return;
+        }
+        
+        if ([[snapshot.value valueForKey:@"p2state"] isEqualToString:@"waiting"] && [[snapshot.value valueForKey:@"p1state"] isEqualToString:@"waiting"]) {
+            [self.passToNextPlayerView setHidden:YES];
+        }else{
+            [self.passToNextPlayerView setHidden:NO];
+        }
+        
+        if (self.isPlayer1) {
+            self.playerGridMatrix = [snapshot.value valueForKey:@"p1Grid"];
+            self.opponentGridMatrix = [snapshot.value valueForKey:@"p2Grid"];
+        }else{
+            self.playerGridMatrix = [snapshot.value valueForKey:@"p2Grid"];
+            self.opponentGridMatrix = [snapshot.value valueForKey:@"p1Grid"];
+        }
+        
+        [self reloadGrids];
+    }];
+
     self.playerGridView.backgroundColor = [UIColor lightGrayColor];
     self.opponentGridView.backgroundColor = [UIColor whiteColor];
     
@@ -61,10 +140,6 @@
     lpgr.delegate = self;
     lpgr.delaysTouchesBegan = YES;
     [self.playerGridView addGestureRecognizer:lpgr];
-    
-    UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideOverlay)];
-    
-    self.isFirstPlayersTurn = YES;
 
     self.passToNextPlayerView = [[UILabel alloc] initWithFrame:self.view.frame];
     [self.passToNextPlayerView setBackgroundColor:[UIColor blackColor]];
@@ -73,14 +148,24 @@
     [self.passToNextPlayerView setTextAlignment:NSTextAlignmentCenter];
     [self.passToNextPlayerView setHidden:YES];
     [self.passToNextPlayerView setUserInteractionEnabled:YES];
-    [self.passToNextPlayerView addGestureRecognizer:tapGesture];
+    [self.passToNextPlayerView setText:@"Waiting..."];
     [self.view addSubview:self.passToNextPlayerView];
     
     self.minimalNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleSuccess
                                                                       title:@"BOOM!"
-                                                                   subTitle:@"You sunk a ship"
+                                                                   subTitle:@"You sunk a ship."
                                                                     dismissalDelay:1.0];
     [self.view addSubview:self.minimalNotification];
+    
+    self.minimalBadNotification = [JFMinimalNotification notificationWithStyle:JFMinimalNotificationStyleError
+                                                                      title:@"BOOM!"
+                                                                   subTitle:@"You got sunk."
+                                                             dismissalDelay:1.0];
+    [self.view addSubview:self.minimalBadNotification];
+}
+
+- (void)viewDidAppear:(BOOL)animated{
+    [self setupGame];
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -90,46 +175,6 @@
 - (UICollectionReusableView*)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
     UICollectionReusableView *cell = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"fag" forIndexPath:indexPath];
     
-    KRLCollectionViewGridLayout *playerLayout = (KRLCollectionViewGridLayout*)self.playerGridView.collectionViewLayout;
-
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(self.view.frame)/2, playerLayout.footerReferenceLength)];
-
-    BOOL addSub = YES;
-    
-    for (id view in cell.subviews) {
-        if ([view isKindOfClass:[UILabel class]]) {
-            label = view;
-            addSub = NO;
-        }
-    }
-    
-    [label setTextAlignment:NSTextAlignmentCenter];
-    [label setTextColor:[UIColor whiteColor]];
-    
-    if (self.isFirstPlayersTurn && collectionView == self.playerGridView) {
-        [label setText:[NSString stringWithFormat:@"Player 1 - Ships Remaining: %lu", (unsigned long)self.playerShipDictionary.count]];
-        [label setTextColor:[UIColor greenColor]];
-    }
-    
-    if (self.isFirstPlayersTurn && collectionView == self.opponentGridView) {
-        [label setText:[NSString stringWithFormat:@"Player 2 - Ships Remaining: %lu", (unsigned long)self.opponentShipDictionary.count]];
-        [label setTextColor:[UIColor redColor]];
-    }
-    
-    if (!self.isFirstPlayersTurn && collectionView == self.playerGridView) {
-        [label setText:[NSString stringWithFormat:@"Player 2 - Ships Remaining: %lu", (unsigned long)self.playerShipDictionary.count]];
-        [label setTextColor:[UIColor greenColor]];
-    }
-    
-    if (!self.isFirstPlayersTurn && collectionView == self.opponentGridView) {
-        [label setText:[NSString stringWithFormat:@"Player 1 - Ships Remaining: %lu", (unsigned long)self.opponentShipDictionary.count]];
-        [label setTextColor:[UIColor redColor]];
-    }
-    
-    if (addSub) {
-        [cell addSubview:label];
-    }
-
     [cell setBackgroundColor:[UIColor darkGrayColor]];
     
     return cell;
@@ -197,7 +242,7 @@
         [self handleFiringWith:row andColumn:column];
     }else if(collectionView == self.playerGridView && self.playerUnplacedShipArray.count > 0){
         // handle placing ships.
-        [self placeShip:[self.playerUnplacedShipArray.firstObject integerValue] AtRow:row withColumn:column horizontal:YES];
+        [self placeShip:self.playerUnplacedShipArray.firstObject AtRow:row withColumn:column horizontal:YES];
     }
 }
 
@@ -213,16 +258,16 @@
         NSInteger row    = [[[self rowAndColumnForIndexPath:indexPath] objectAtIndex:1] integerValue];
         
         if (self.playerUnplacedShipArray.count > 0) {
-            [self placeShip:[self.playerUnplacedShipArray.firstObject integerValue] AtRow:row withColumn:column horizontal:NO];
+            [self placeShip:self.playerUnplacedShipArray.firstObject AtRow:row withColumn:column horizontal:NO];
         }
     }
 }
 
 // all the repetitive stuff here could be rolled into a loop, but im lazy. and this is easy. c+p FTW..
-- (void)placeShip:(NSInteger)ship AtRow:(NSInteger)row withColumn:(NSInteger)column horizontal:(BOOL)horizontal{
+- (void)placeShip:(NSString*)ship AtRow:(NSInteger)row withColumn:(NSInteger)column horizontal:(BOOL)horizontal{
     NSNumber *point = [[self.playerGridMatrix objectAtIndex:row] objectAtIndex:column];
     NSMutableArray *columns = [self.playerGridMatrix objectAtIndex:row];
-    NSInteger shipHP = [[[self.playerShipDictionary objectForKey:@(ship)] valueForKey:@"HP"] integerValue];
+    NSInteger shipHP = [[[self.playerShipDictionary objectForKey:ship] valueForKey:@"HP"] integerValue];
     NSInteger *number = 0;
 
     if (point.integerValue == 0) {
@@ -237,7 +282,7 @@
             
             if (number == 0) {
                 for (int i = 0; i < shipHP; i++) {
-                    [[self.playerGridMatrix objectAtIndex:row+i] replaceObjectAtIndex:column withObject:@(ship)];
+                    [[self.playerGridMatrix objectAtIndex:row+i] replaceObjectAtIndex:column withObject:@([ship integerValue])];
                 }
                 
                 [self.playerUnplacedShipArray removeObjectAtIndex:0];
@@ -253,7 +298,7 @@
             
             if (number == 0) {
                 for (int i = 0; i < shipHP; i++) {
-                    [columns replaceObjectAtIndex:column+i withObject:@(ship)];
+                    [columns replaceObjectAtIndex:column+i withObject:@([ship integerValue])];
                 }
                 
                 [self.playerUnplacedShipArray removeObjectAtIndex:0];
@@ -262,7 +307,17 @@
     }
     
     if (self.playerUnplacedShipArray.count == 0) {
-        [self performSelector:@selector(swapMatrixGrid) withObject:nil afterDelay:0.45];
+        if (self.isPlayer1) {
+            [self.fireBase updateChildValues:@{
+                                               @"p1state" : @"waiting",
+                                               @"p1Grid"  : self.playerGridMatrix
+                                               }];
+        }else{
+            [self.fireBase updateChildValues:@{
+                                               @"p2state" : @"waiting",
+                                               @"p2Grid"  : self.playerGridMatrix
+                                               }];
+        }
     }
     
     [self reloadGrids];
@@ -277,7 +332,7 @@
         if (point.integerValue == 1 || point.integerValue == 2 || point.integerValue == 3) {
             return;
         }else{
-            NSMutableDictionary *ship = [self.opponentShipDictionary objectForKey:point];
+            NSMutableDictionary *ship = [self.opponentShipDictionary objectForKey:point.stringValue];
             NSInteger HP = [[ship objectForKey:@"HP"] integerValue];
             
             if (--HP > 0) {
@@ -285,22 +340,20 @@
             }else{
                 // TODO:
                 // need to mark dead!
-                [self.opponentShipDictionary removeObjectForKey:@(point.integerValue)];
-                [self.minimalNotification show];
+                if (self.isPlayer1) {
+                    [self.fireBase updateChildValues:@{@"p1state" : @"killed"}];
+                }else{
+                    [self.fireBase updateChildValues:@{@"p2state" : @"killed"}];
+                }
+                [self.opponentShipDictionary removeObjectForKey:point.stringValue];
                 
                 // WON
                 if (self.opponentShipDictionary.count == 0) {
-                    UIAlertController *alert =  [[UIAlertController alertControllerWithTitle:@"Great job." message:[NSString stringWithFormat:@"Congrats %@! You won!", !self.isFirstPlayersTurn ? @"Player 1" : @"Player 2"] preferredStyle:UIAlertControllerStyleAlert] init];
-                    
-                    UIAlertAction *action = [UIAlertAction actionWithTitle:@"Reset" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-                       [self setupGame];
-                       [alert dismissViewControllerAnimated:YES completion:nil];
-                    }];
-                    
-                    [alert addAction:action];
-                    
-                    [self presentViewController:alert animated:YES completion:nil];
-                    
+                    if (self.isPlayer1) {
+                        [self.fireBase updateChildValues:@{@"win" : @"1"}];
+                    }else{
+                        [self.fireBase updateChildValues:@{@"win" : @"2"}];
+                    }
                     return;
                 }
             }
@@ -309,46 +362,55 @@
         }
     }
     
-    [self performSelector:@selector(swapMatrixGrid) withObject:nil afterDelay:0.45];
-    [self reloadGrids];
+    if (self.isPlayer1) {
+        [self.fireBase updateChildValues:@{
+                                           @"p2Grid"  : self.opponentGridMatrix,
+                                           @"p2Ships" : self.opponentShipDictionary
+                                           }];
+    }else{
+        [self.fireBase updateChildValues:@{
+                                           @"p1Grid"  : self.opponentGridMatrix,
+                                           @"p1Ships" : self.opponentShipDictionary
+                                           }];
+    }
 }
 
 - (void)setupGame{
     
-    self.playerUnplacedShipArray = [NSMutableArray arrayWithArray:@[@(4), @(5), @(6), @(7), @(8)]];
+    self.playerUnplacedShipArray = [NSMutableArray arrayWithArray:@[@"4", @"5", @"6", @"7", @"8"]];
     self.playerShipDictionary = [NSMutableDictionary dictionaryWithDictionary:@{
-                                                                                @(4): [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                @"4": [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                                                                       @"HP": @(5)
                                                                                                                                       }],
-                                                                                @(5): [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                @"5": [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                                                                       @"HP": @(4)
                                                                                                                                       }],
-                                                                                @(6): [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                @"6": [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                                                                       @"HP": @(3)
                                                                                                                                       }],
-                                                                                @(7): [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                @"7": [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                                                                       @"HP": @(3)
                                                                                                                                       }],
-                                                                                @(8): [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                @"8": [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                                                                       @"HP": @(2)
                                                                                                                                       }],
                                                                                 }];
     
-    self.opponentUnplacedShipArray = [NSMutableArray arrayWithArray:@[@(4), @(5), @(6), @(7), @(8)]];
+    self.opponentUnplacedShipArray = [NSMutableArray arrayWithArray:@[@"4", @"5", @"6", @"7", @"8"]];
     self.opponentShipDictionary = [NSMutableDictionary dictionaryWithDictionary:@{
-                                                                                  @(4): [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                  @"4": [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                                                                         @"HP": @(5)
                                                                                                                                         }],
-                                                                                  @(5): [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                  @"5": [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                                                                         @"HP": @(4)
                                                                                                                                         }],
-                                                                                  @(6): [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                  @"6": [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                                                                         @"HP": @(3)
                                                                                                                                         }],
-                                                                                  @(7): [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                  @"7": [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                                                                         @"HP": @(3)
                                                                                                                                         }],
-                                                                                  @(8): [NSMutableDictionary dictionaryWithDictionary:@{
+                                                                                  @"8": [NSMutableDictionary dictionaryWithDictionary:@{
                                                                                                                                         @"HP": @(2)
                                                                                                                                         }],
                                                                                   }];
@@ -376,6 +438,17 @@
     self.playerGridMatrix = matrix;
     self.opponentGridMatrix = matrix2;
     
+    if (self.isPlayer1) {
+        [self.fireBase setValue:@{
+                                  @"p1state" : @"placement",
+                                  @"p1Ships" : self.playerShipDictionary,
+                                  @"p2state" : @"placement",
+                                  @"p2Ships" : self.opponentShipDictionary,
+                                  @"p1Grid"  : self.playerGridMatrix,
+                                  @"p2Grid"  : self.opponentGridMatrix
+                                  }];
+    }
+    
     [self reloadGrids];
 }
 
@@ -397,33 +470,9 @@
     return @[@(row), @(column)];
 }
 
-- (void)swapMatrixGrid{
-    [self.passToNextPlayerView setText:[NSString stringWithFormat:@"Pass to %@.\nNow tap.", !self.isFirstPlayersTurn ? @"Player 1" : @"Player 2"]];
-    [self.passToNextPlayerView setHidden:NO];
-    self.isFirstPlayersTurn = !self.isFirstPlayersTurn;
-    
-    NSMutableArray *swap = self.opponentGridMatrix;
-    self.opponentGridMatrix = self.playerGridMatrix;
-    self.playerGridMatrix = swap;
-    
-    NSMutableArray *swap2 = self.opponentUnplacedShipArray;
-    self.opponentUnplacedShipArray = self.playerUnplacedShipArray;
-    self.playerUnplacedShipArray = swap2;
-    
-    NSMutableDictionary *swap3 = self.opponentShipDictionary;
-    self.opponentShipDictionary = self.playerShipDictionary;
-    self.playerShipDictionary = swap3;
-    
-    [self reloadGrids];
-}
-
 - (void)reloadGrids{
     [self.playerGridView reloadData];
     [self.opponentGridView reloadData];
-}
-
-- (void)hideOverlay{
-    [self.passToNextPlayerView setHidden:YES];
 }
 
 - (BOOL)prefersStatusBarHidden{

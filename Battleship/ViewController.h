@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 
+@property (nonatomic) BOOL isPlayer1;
 
 @end
 
